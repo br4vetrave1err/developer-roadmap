@@ -4,9 +4,6 @@ Networking and protocols refer to the rules and systems that allow computers and
 
 Visit the following resources to learn more:
 
-- [@article@Cloudflare - What is SSL?](https://www.cloudflare.com/learning/ssl/what-is-ssl/)
-- [@article@Cloudflare - What is TLS?](https://www.cloudflare.com/en-gb/learning/ssl/transport-layer-security-tls/)
-- [@article@Everything you need to know about HTTP](https://cs.fyi/guide/http-in-depth)
-- [@article@What is DNS?](https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/)
+- [@roadmap@Visit the Dedicated Network Engineer Roadmap](https://roadmap.sh/network-engineer)
 - [@video@DNS and How does it Work?](https://www.youtube.com/watch?v=Wj0od2ag5sk)
 - [@video@SSH vs SSL vs TLS](https://www.youtube.com/watch?v=k3rFFLmQCuY)

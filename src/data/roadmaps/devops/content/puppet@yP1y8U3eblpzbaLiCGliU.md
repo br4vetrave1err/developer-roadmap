@@ -4,5 +4,5 @@ Puppet is a configuration management tool that lets you define the desired state
 
 Visit the following resources to learn more:
 
-- [@official@Puppet Website](https://puppet.com/)
 - [@course@Puppet Full Course | Learn Puppet Training](https://www.youtube.com/watch?v=Ns_tRKD20c4)
+- [@official@Puppet Website](https://puppet.com/)
