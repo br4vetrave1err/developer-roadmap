@@ -1,0 +1,38 @@
+name: Sync with Upstream
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout fork
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Sync with upstream
+        run: |
+          git remote add upstream https://github.com/nilbuild/developer-roadmap.git
+          git fetch upstream master
+          
+          # Check if there are new commits
+          LOCAL=$(git rev-parse HEAD)
+          REMOTE=$(git rev-parse upstream/master)
+          
+          if [ "$LOCAL" = "$REMOTE" ]; then
+            echo "No new commits from upstream"
+            exit 0
+          fi
+          
+          # Merge upstream changes
+          git merge upstream/master --no-edit
+          
+          # Push to fork (this triggers the webhook)
+          git push origin master
+          
+          echo "Synced fork with upstream: $LOCAL -> $REMOTE"
